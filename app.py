@@ -1,6 +1,7 @@
 from flask import Flask , render_template, request
 
-# import model
+import model 
+import numpy as np
 
 app = Flask(__name__)
 
@@ -25,9 +26,11 @@ def hello():
         ShapeFactor3 = request.form["ShapeFactor3"]
         ShapeFactor4 = request.form["ShapeFactor4"]
 
+        colum = np.array([area,perimeter,majorAxisLength,minorAxisLength,aspectRation,eccentricity,
+                 convexArea,equivDiameter,extent,solidity,roundness,compactness,shapeFactor1,
+                 ShapeFactor2,ShapeFactor3,ShapeFactor4])
 
-
-        ourbeans = model.beans_prediction(beansname)
+        ourbeans = model.beans_prediction(colum)
         print(ourbeans)
 
 
