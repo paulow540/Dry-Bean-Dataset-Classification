@@ -35,7 +35,7 @@ def hello():
 
 
 
-    return render_template("index.html", my_ourbeans = ourbeans[0])
+    return render_template("index.html", my_ourbeans = ourbeans )
 
 
 
