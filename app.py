@@ -1,12 +1,11 @@
 from flask import Flask , render_template, request
 
-import model 
+import mymodel as my
 import numpy as np
 
 app = Flask(__name__)
 
-@app.route("/", methods = ["POST"])
-
+@app.route("/", methods = ['GET', 'POST'])
 def hello():
     if request.method == "POST":
         area = request.form["Area"]
@@ -29,13 +28,15 @@ def hello():
         colum = np.array([area,perimeter,majorAxisLength,minorAxisLength,aspectRation,eccentricity,
                  convexArea,equivDiameter,extent,solidity,roundness,compactness,shapeFactor1,
                  ShapeFactor2,ShapeFactor3,ShapeFactor4])
+        print(colum, "this columns")
 
-        ourbeans = model.beans_prediction(colum)
-        print(ourbeans)
+        ourbeans = my.beans_prediction(colum)
+        print(ourbeans, "alllllllllllll")
 
 
 
-    return render_template("index.html")
+    return render_template("index.html", my_ourbeans = ourbeans[0])
+
 
 
 # @app.route("/sub", methods = ["POST"])

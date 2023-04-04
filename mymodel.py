@@ -6,7 +6,7 @@ warnings.filterwarnings("ignore")
 
 import seaborn as sns
 
-def beans_prediction():
+def beans_prediction(beans):
     beansdata = pd.read_excel("Dry_Bean_Dataset.xlsx")
 
     X_iris = beansdata.drop('Class', axis=1)
@@ -19,11 +19,10 @@ def beans_prediction():
     model = GaussianNB() # 2. instantiate model
     model.fit(Xtrain, ytrain) # 3. fit model to data
     y_model = model.predict(Xtest)
+    print(Xtest)
 
     from sklearn.metrics import accuracy_score
     accuracy_score(ytest, y_model)
-    print(accuracy_score(ytest, y_model))
+    print(accuracy_score(ytest, y_model), "accuracy_score#####")
 
     return model.predict(Xtest)
-
-beans_prediction()
