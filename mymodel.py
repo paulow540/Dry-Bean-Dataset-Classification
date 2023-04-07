@@ -19,10 +19,15 @@ def beans_prediction(beans):
     model = GaussianNB() # 2. instantiate model
     model.fit(Xtrain, ytrain) # 3. fit model to data
     y_model = model.predict(Xtest)
-    print(Xtest)
+    print(y_model,"okkkkkkkkkkkkkkkkkkkk")
 
     from sklearn.metrics import accuracy_score
     accuracy_score(ytest, y_model)
     print(accuracy_score(ytest, y_model), "accuracy_score#####")
+    new_sample = Xtest.copy() 
+    new_sample['species'] = ytest
+    new_sample.iloc[16]
+    y_model = model.predict(Xtest.iloc[16].values.reshape(1,16))
+    print("Your new specie is ",y_model[0], " flower.")
 
-    return model.predict(Xtest)
+    return model.predict(y_model[0])

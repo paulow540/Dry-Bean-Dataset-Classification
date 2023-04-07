@@ -25,17 +25,17 @@ def hello():
         ShapeFactor3 = request.form["ShapeFactor3"]
         ShapeFactor4 = request.form["ShapeFactor4"]
 
-        colum = np.array([area,perimeter,majorAxisLength,minorAxisLength,aspectRation,eccentricity,
-                 convexArea,equivDiameter,extent,solidity,roundness,compactness,shapeFactor1,
-                 ShapeFactor2,ShapeFactor3,ShapeFactor4])
-        print(colum, "this columns")
+        # colum = np.array([area,perimeter,majorAxisLength,minorAxisLength,aspectRation,eccentricity,
+        #          convexArea,equivDiameter,extent,solidity,roundness,compactness,shapeFactor1,
+        #          ShapeFactor2,ShapeFactor3,ShapeFactor4])
 
-        ourbeans = my.beans_prediction(colum)
-        print(ourbeans, "alllllllllllll")
+        # ourbeans = my.beans_prediction(colum)
+        # print(colum, "this columns")
+        # print(ourbeans, "alllllllllllll")
 
 
 
-    return render_template("index.html", my_ourbeans = ourbeans )
+    return render_template("index.html" )
 
 
 
