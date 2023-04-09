@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/okay.css">
     <title>Model Deployment</title>
-    <link rel="stylesheet" href="style.css">
-    
+
 </head>
+
 <body>
-    
+
 
     <h1>Predict the caterogy of Bean</h1>
 
     <p>
-        Enter the number of 
+        Enter the Numbers into all the feilds to categories the name of Beans
     </p>
+    <div>
 
-    <form action="/" method="POST" class="lol">
+        <form action="/" method="POST" class="lol">
 
-        <input type="number" name="Area" placeholder="Area">
-        <input type="number" name="Perimeter" id="" placeholder="Perimeter">
-        <input type="number" name="MajorAxisLength" id="" placeholder="MajorAxisLength">
-        <input type="number" name="MinorAxisLength" id="" placeholder="MinorAxisLength">
-        <input type="number" name="AspectRation" id="" placeholder="AspectRation">
-        <input type="number" name="Eccentricity" id="" placeholder="Eccentricity">
-        <input type="number" name="ConvexArea" id="" placeholder="ConvexArea">
-        <input type="number" name="EquivDiameter" id="EquivDiameter" placeholder="EquivDiameter">
-        <input type="number" name="Extent" id="Extent" placeholder="Extent">
-        <input type="number" name="Solidity" id="Solidity" placeholder="Solidity">
-        <input type="number" name="roundness" id="roundness" placeholder="roundness">
-        <input type="number" name="Compactness" id="Compactness" placeholder="Compactness">
-        <input type="number" name="ShapeFactor1" id="ShapeFactor1" placeholder="ShapeFactor1">
-        <input type="number" name="ShapeFactor2" id="ShapeFactor2" placeholder="ShapeFactor2">
-        <input type="number" name="ShapeFactor3" id="ShapeFactor3" placeholder="ShapeFactor3">
-        <input type="number" name="ShapeFactor4" id="ShapeFactor4" placeholder="ShapeFactor4">
+            <input type="text" name="Area" placeholder="Area" required="required"/>
+            <input type="text" name="Perimeter" id="" placeholder="Perimeter" required="required"/>
+            <input type="text" name="MajorAxisLength" id="" placeholder="MajorAxisLength" required="required"/>
+            <input type="text" name="MinorAxisLength" id="" placeholder="MinorAxisLength" required="required"/>
+            <input type="text" name="AspectRation" id="" placeholder="AspectRation" required="required"/>
+            <input type="text" name="Eccentricity" id="" placeholder="Eccentricity" required="required"/>
+            <input type="text" name="ConvexArea" id="" placeholder="ConvexArea" required="required"/>
+            <input type="text" name="EquivDiameter" id="EquivDiameter" placeholder="EquivDiameter" required="required"/>
+            <input type="text" name="Extent" id="Extent" placeholder="Extent" required="required"/>
+            <input type="text" name="Solidity" id="Solidity" placeholder="Solidity" required="required"/>
+            <input type="text" name="roundness" id="roundness" placeholder="roundness" required="required"/>
+            <input type="text" name="Compactness" id="Compactness" placeholder="Compactness" required="required"/>
+            <input type="text" name="ShapeFactor1" id="ShapeFactor1" placeholder="ShapeFactor1" required="required"/>
+            <input type="text" name="ShapeFactor2" id="ShapeFactor2" placeholder="ShapeFactor2" required="required"/>
+            <input type="text" name="ShapeFactor3" id="ShapeFactor3" placeholder="ShapeFactor3" required="required"/>
+            <input type="text" name="ShapeFactor4" id="ShapeFactor4" placeholder="ShapeFactor4" required="required"/>
 
-        <input type="submit">
+            <button type="submit">Predict</button>
+
+
+        </form>
+    </div>
+  
+
+    <div>
         
-
-    </form>
-    <!-- <p>
-        28395	610.291	208.178117	173.888747	1.197191	0.549812	28715	190.141097	0.763923	0.988856	0.958027	0.913358	0.007332	0.003147	0.834222	0.998724
-    </p> -->
-    
-    <!-- <div>
         <h2>
+            
             {{ my_ourbeans }}
         </h2>
-    </div> -->
+        
+        <img src="{{pic}}" alt="">
+        
+    </div>
 </body>
+
 </html>
