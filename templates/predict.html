@@ -26,28 +26,12 @@
         <div class="form">
 
             <form action="/" method="POST" class="lol">
+                <input type="text" name="a"  placeholder="Perimeter" required="required" />                
+                <input type="text" name="b"  placeholder="Extent" required="required" />
+                <input type="text" name="c"  placeholder="Solidity" required="required" />
+                <input type="text" name="d"  placeholder="roundness" required="required" />
+                <input type="text" name="e"  placeholder="Compactness" required="required" />
 
-                <!-- <input type="text" name="Area" placeholder="Area" required="required" /> -->
-                <input type="text" name="Perimeter" id="" placeholder="Perimeter" required="required" />
-                <!-- <input type="text" name="MajorAxisLength" id="" placeholder="MajorAxisLength" required="required" />
-                <input type="text" name="MinorAxisLength" id="" placeholder="MinorAxisLength" required="required" />
-                <input type="text" name="AspectRation" id="" placeholder="AspectRation" required="required" />
-                <input type="text" name="Eccentricity" id="" placeholder="Eccentricity" required="required" /> -->
-                <!-- <input type="text" name="ConvexArea" id="" placeholder="ConvexArea" required="required" /> -->
-                <!-- <input type="text" name="EquivDiameter" id="EquivDiameter" placeholder="EquivDiameter"
-                    required="required" /> -->
-                <input type="text" name="Extent" id="Extent" placeholder="Extent" required="required" />
-                <input type="text" name="Solidity" id="Solidity" placeholder="Solidity" required="required" />
-                <input type="text" name="roundness" id="roundness" placeholder="roundness" required="required" />
-                <input type="text" name="Compactness" id="Compactness" placeholder="Compactness" required="required" />
-                <!-- <input type="text" name="ShapeFactor1" id="ShapeFactor1" placeholder="ShapeFactor1"
-                    required="required" />
-                <input type="text" name="ShapeFactor2" id="ShapeFactor2" placeholder="ShapeFactor2"
-                    required="required" />
-                <input type="text" name="ShapeFactor3" id="ShapeFactor3" placeholder="ShapeFactor3"
-                    required="required" />
-                <input type="text" name="ShapeFactor4" id="ShapeFactor4" placeholder="ShapeFactor4"
-                    required="required" /> -->
 
                 <button type="submit">Predict</button>
 
@@ -61,7 +45,7 @@
                 {{ my_ourbeans }}
             </h2>
 
-            <img src="{{pic}}" alt="">
+            <img src="{{ pic }}" alt="">
         </div>
 
     </div>
